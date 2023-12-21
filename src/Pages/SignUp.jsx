@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { Navigate, useNavigate } from 'react-router-dom'
 useNavigate
+import { Link } from 'react-router-dom'
 function SignUp() {
 const [user,setUser]=useState({
     name:'',
@@ -21,7 +22,7 @@ let valdEmail=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 
 function val(){
       if(user.name.length<3) {
-          setM('Name must be 4 letters atleast')
+        setM('Name must be 4 letters atleast')
       }
      else if(!valdEmail.test(user.em)){
         setM('invalid email')
@@ -81,7 +82,7 @@ function check(){
                 </div>
                 <div className="mt-4 flex items-center justify-between">
                     <span className="border-b w-1/5 md:w-1/4"></span>
-                    <a href="/SignUp" className="text-xs hover:text-indigo-400 text-indigo-800  uppercase">or Sign up</a>
+                    <Link to="/SignUp" className="text-xs hover:text-indigo-400 text-indigo-800  uppercase">or Sign up</Link>
                     <span className="border-b w-1/5 md:w-1/4"></span>
                 </div>
             </div>

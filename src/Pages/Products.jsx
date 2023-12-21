@@ -23,6 +23,7 @@ function Products() {
    useEffect(()=>{
       getData()
    },[])
+   
    let inputHandler = (e) => {
     var lowerCase = e.target.value.toLowerCase();
     setInput(lowerCase);

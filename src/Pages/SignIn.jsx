@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 useNavigate
+import { Link } from 'react-router-dom'
 function SignIn() {
     const navigate=useNavigate()
 const [user,setU]=useState({
@@ -66,7 +67,7 @@ function go(){
                 </div>
                 <div className="mt-4 flex items-center justify-between">
                     <span className="border-b w-1/5 md:w-1/4"></span>
-                    <a href="/SignUp" className="text-xs hover:text-indigo-400 text-indigo-800  uppercase">or Sign up</a>
+                    <Link to="/SignUp" className="text-xs hover:text-indigo-400 text-indigo-800  uppercase">or Sign up</Link>
                     <span className="border-b w-1/5 md:w-1/4"></span>
                 </div>
             </div>

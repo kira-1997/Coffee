@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 useNavigate
 function Nav1() {
    
@@ -27,26 +28,26 @@ const navi=useNavigate()
     {localStorage.getItem('id')? 
     <div
         className="toggle items-center  justify-center hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-900 md:border-none">
-        <a href="/"
+        <Link to="/"
             className="block md:inline-block text-indigo-800 hover:text-indigo-400 px-3 py-3 border-b-2 border-blue-900 md:border-none">Home
-        </a>
-        <a href="/Products"
+        </Link>
+        <Link to="/Products"
             className="block md:inline-block text-indigo-800 hover:text-indigo-400 px-3 py-3 border-b-2 border-blue-900 md:border-none">Products
-        </a>
-        <a href="/Profile"
+        </Link>
+        <Link to="/Profile"
             className="block md:inline-block text-indigo-800 hover:text-indigo-400 px-3 py-3 border-b-2 border-blue-900 md:border-none">Profile
-        </a>
-        <a href="/Cart"
+        </Link>
+        <Link to="/Cart"
             className="block md:inline-block text-indigo-800 hover:text-indigo-400 px-3 py-3 border-b-2 border-blue-900 md:border-none">Cart
-        </a>
+        </Link>
         <button onClick={(()=>out())}
         className="toggle hidden md:flex w-full md:w-auto px-4 py-2 text-right bg-indigo-800 hover:bg-indigo-400 text-white md:rounded">Sign Out
     </button>
     </div>
      :
-    <a href="/SignIn"
+    <Link to="/SignIn"
         className="toggle hidden md:flex w-full md:w-auto px-4 py-2 text-right bg-indigo-800 hover:bg-indigo-400 text-white md:rounded">Sign In
-    </a>
+    </Link>
 }
 </nav>
   
